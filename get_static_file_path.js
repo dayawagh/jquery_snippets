@@ -1,3 +1,4 @@
+/**/
 $(document).ready(() => {
     $("#video").change(function () {
         const file = this.files[0];
