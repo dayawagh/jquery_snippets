@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Print PDF using inline iFrame</title>
+</head>
+<body>
+    <iframe 
+        src="../sample.pdf" id="myFrame" 
+            frameborder="0" style="border:0;" 
+                width="300" height="300">
+    </iframe>
+    <p>
+        <input type="button" id="bt" onclick="print()" value="Print PDF" />
+    </p>
+</body>
+
+<script>
+	let print = () => {
+    	let objFra = document.getElementById('myFrame');
+        objFra.contentWindow.focus();
+        objFra.contentWindow.print();
+    }
+    
+    // Using regular js features.
+    
+//     function print() {
+//         var objFra = document.getElementById('myFrame');
+//         objFra.contentWindow.focus();
+//         objFra.contentWindow.print();
+//     }
+</script>
+</html>
