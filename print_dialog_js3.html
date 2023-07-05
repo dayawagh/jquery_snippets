@@ -1,0 +1,17 @@
+<body>
+    <button onclick="printPdf('./test.pdf')">Print PDF file</button>
+    <script src="index.js"></script>
+</body>
+<script>
+  function printPdf(pdf) {
+
+    var iframe = document.createElement('iframe');
+    iframe.style.display = "none";
+    iframe.src = pdf;
+
+    document.body.appendChild(iframe);
+    iframe.contentWindow.focus();
+    iframe.contentWindow.print();
+}
+
+</script>
